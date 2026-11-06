@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+  MÁSCARA PARA GITHUB PAGES (opcional)
+  Sirve ÚNICAMENTE para quitar la franja gris de Google («Esta aplicación
+  fue creada por un usuario de Google Apps Script»). Muestra tu misma
+  invitación de Apps Script dentro de esta página.
+
+  Cómo usarla:
+  1. En GitHub crea un repositorio público (ej. «boda-ana-luis»).
+  2. Sube este archivo con el nombre index.html.
+  3. Abajo, cambia LINK_APP por tu link de Apps Script (el que termina en /exec)
+     y el título.
+  4. En el repositorio: Settings > Pages > Branch: main > Save.
+     Tu link será: https://TU-USUARIO.github.io/boda-ana-luis/
+  5. Comparte ESE link con tus invitados. Opcional: pégalo en
+     EVENTO.linkPublico (Code.gs) para que el panel comparta ese link.
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ana &amp; Luis — ¡Nos casamos!</title>
+<style>
+  html,body{margin:0;height:100%;background:#991B53}
+  iframe{position:fixed;inset:0;width:100%;height:100%;border:0;display:block}
+</style>
+</head>
+<body>
+<iframe id="app" title="Invitación" allow="clipboard-write; fullscreen"></iframe>
+<script>
+  // Pega aquí el link de tu app de Apps Script (termina en /exec):
+  var LINK_APP = 'https://script.google.com/macros/s/AKfycbzRqnqCvpiOjqCbejaPVnAFj_6thQR-a0TmefMwJsEUhDIsuM5kGOx2NCFgj_zkotXuiQ/exec';
+  document.getElementById('app').src = LINK_APP + location.search;
+</script>
+</body>
+</html>
+
+
